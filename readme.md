@@ -1,1 +1,1 @@
-angularjs+springboot+shiro+mybatis
+AngularJS+SpringBoot+Shiro+MyBatis
