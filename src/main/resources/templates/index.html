@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>Springboot</title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	</head>
+	<body>
+	    <ui-view></ui-view>
+	    <script type="text/javascript" src="js/lib/angular.min.js"></script>
+	    <script type="text/javascript" src="js/lib/angular-ui-router.min.js"></script>
+	    <script type="text/javascript" src="js/lib/angular-resource.min.js"></script>
+	    <script type="text/javascript" src="js/lib/ui-bootstrap-tpls-1.3.0.min.js"></script>
+	    <script type="text/javascript" src="js/common/directive.js"></script>
+	    <script type="text/javascript" src="js/common/http.js"></script>
+	    <script type="text/javascript" src="js/admin/service.js"></script>
+	    <script type="text/javascript" src="js/user/service.js"></script>
+	    <script type="text/javascript" src="js/product/service.js"></script>
+	    <script type="text/javascript" src="js/admin/controller.js"></script>
+	    <script type="text/javascript" src="js/user/controller.js"></script>
+	    <script type="text/javascript" src="js/product/controller.js"></script>
+	    <script type="text/javascript">
+	         var myApp = angular.module("myApp",["ui.router","httpModule","adminModule","productModule","userModule","directModule","ui.bootstrap"]);
+	         myApp.config(function($stateProvider,$locationProvider){
+	        	 var base = {abstract:true,name:"base",templateUrl:'views/base.html'};
+	        	 var loginBase = {abstract:true,name:"loginBase",templateUrl:'views/loginBase.html'};
+	        	 var states = [
+	        	    base,
+	        	    loginBase,
+	        	    {name:"login",parent:loginBase,url:"",templateUrl:'views/user/login.html',controller:'LoginController'},
+	        	    {name:"admin",parent:base,url:'/admin/list',templateUrl:'views/admin/list.html',controller:'AdminController'},
+	        	    {name:"user",parent:base,url:'/user/list',templateUrl:'views/user/list.html',controller:'UserController'},
+	        	    {name:"product",parent:base,url:'/product/list',templateUrl:'views/product/list.html',controller:'ProductController'},
+	        	    {name:"product-add",parent:base,url:'/product/add',templateUrl:'views/product/add.html',controller:'ProductAddController'},
+	        	    {name:"product-update",parent:base,url:'/product/add/{id}',templateUrl:'views/product/add.html',controller:'ProductUpdateController'},
+	        	    {name:"product-upload",parent:base,url:'/product/upload',templateUrl:'views/product/upload.html',controller:'UploadController'}
+	        	 ];
+	        	 angular.forEach(states,function(state){
+	        		 $stateProvider.state(state);
+	        	 });
+	        	 $locationProvider.hashPrefix("");
+	         });	    
+	    </script>
+	</body>
+</html>

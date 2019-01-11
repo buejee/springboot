@@ -1,0 +1,47 @@
+<h2>产品列表</h2>
+<form>
+	<div>
+	   <a href="#/product/add">新增</a>
+	</div>
+</form>
+<div class="table-wrapper">
+	<ul>
+		<li class="table-head">
+			<span class="item-normal">Id</span>
+			<span class="item-normal">名称</span>
+			<span class="item-normal">价格</span>
+			<span class="item-normal">描述</span>
+			<span class="item-normal">库存</span>
+			<span class="item-normal">批发量</span>
+			<span class="item-normal">批发额</span>
+			<span class="item-normal">批发价</span>
+			<span class="item-normal item-large">操作</span>
+		</li>
+		<li ng-repeat="item in list">
+			<span class="item-normal">{{item.id}}</span>
+			<span class="item-normal">{{item.name}}</span>
+			<span class="item-normal">{{item.price}}</span>
+			<span class="item-normal">{{item.desc}}</span>
+			<span class="item-normal">{{item.stock}}</span>
+			<span class="item-normal">{{item.batchCount}}</span>
+			<span class="item-normal">{{item.batchAmount}}</span>
+			<span class="item-normal">{{item.batchPrice}}</span>
+			<span class="item-normal item-large"><a href="#/product/add/{{item.id}}">修改</a>&nbsp;&nbsp;<a href="javascript:void(0);" ng-click="deleteOne('{{item.id}}')">删除</a></span>
+		</li>
+	</ul>
+	<uib-pagination class="pagination-sm pull-bottom"  
+				items-per-page="10"          
+				ng-model="page"  
+				total-items="total"     
+				max-size="maxSize"           
+				ng-change="getList()"    
+				boundary-links="true"       
+				boundary-link-numbers="true" 
+				rotate="false"                
+				force-ellipses="true" 
+                first-text="首页"				
+				previous-text="上一页" 
+				next-text="下一页"
+				last-text="末页">                 
+	</uib-pagination>
+</div>

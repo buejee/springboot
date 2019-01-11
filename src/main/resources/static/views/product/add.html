@@ -1,0 +1,36 @@
+<div class="box">
+     <h2>product</h2>
+     <form action="">
+        <div class="box-item">
+        	<label>名称：</label>
+        	<input type="text" name="name" ng-model="product.name"/>
+        </div>
+        <div class="box-item">
+        	<label>描述：</label>
+        	<input type="text" name="desc" ng-model="product.desc"/>
+        </div>
+        <div class="box-item">
+        	<label>单价：</label>
+        	<input type="text" name="price" ng-model="product.price"/>
+        </div>
+        <div class="box-item">
+        	<label>库存：</label>
+        	<input type="text" name="stock" ng-model="product.stock"/>
+        </div>
+        <div class="box-item">
+        	<label>批发量：</label>
+        	<input type="text" name="batchCount" ng-model="product.batchCount"/>
+        </div>
+        <div class="box-item">
+        	<label>批发价：</label>
+        	<input type="text" name="batchPrice" ng-model="product.batchPrice"/>
+        </div>
+        <div class="box-item">
+        	<label>批发额：</label>
+        	<input type="text" name="batchAmount" ng-model="product.batchAmount"/>
+        </div>
+        <div class="box-item">
+        	<input type="button" class="btn btn-primary" ng-click="save();" value="保存"/>
+        </div>
+     </form>    
+</div>

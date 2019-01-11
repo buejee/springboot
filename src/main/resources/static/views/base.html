@@ -1,0 +1,37 @@
+<div id="container">
+     <header>springboot+angularjs in action <a href="/">login</a></header>
+     <main>
+         <aside class="menu">
+              <a href="#/">admin</a>
+              <a href="#/user/list">user</a>
+              <a href="#/product/list">product</a>
+              <a href="#/product/upload">upload</a>
+         </aside>
+         <section class="content">
+              <ui-view></ui-view>
+         </section>
+     </main>
+     <footer>copyright@xxx 1998-2018</footer>
+     <script type="text/ng-template" id="hello.html">
+          <div>hello,{{name}},<input type="text" ng-model="name"/></div>
+     </script>
+     <script type="text/ng-template" id="dialog.html">
+          <div class="modal-header">
+			<h3 class="modal-title">模态框</h3>
+		</div>
+		<div class="modal-body">
+			<ul>
+				<li ng-repeat="item in items">
+				<a ng-click="selected.item = item">{{item}}</a>
+				</li>
+				<div class="h2">当前选择： <b>{{selected.item}}</b></div>
+			</ul>
+		</div>
+		<div class="modal-footer">
+			<button class="btn btn-primary" ng-click="ok()">
+			确认
+			</button>
+			<button class="btn btn-warning" ng-click="cancel()">退出</button>
+		</div>
+     </script>
+</div>

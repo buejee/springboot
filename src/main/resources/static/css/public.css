@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+
+.item-normal{display:inline-block;width:80px;text-align:center;}
+.item-large{width:100px;}
+.table-head .item-normal{font-weight:bold;}
