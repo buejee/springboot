@@ -1,21 +1,38 @@
-<div id="container">
-     <header>springboot+angularjs in action <a href="/">login</a></header>
-     <main>
-         <aside class="menu">
-              <a href="#/">admin</a>
-              <a href="#/user/list">user</a>
-              <a href="#/product/list">product</a>
-              <a href="#/product/upload">upload</a>
-         </aside>
-         <section class="content">
-              <ui-view></ui-view>
-         </section>
-     </main>
-     <footer>copyright@xxx 1998-2018</footer>
-     <script type="text/ng-template" id="hello.html">
+<header class="clearfix">
+    <div class="user-info fr"><a  href="/">login</a></div>
+    <div class="logo">xx科技有限公司</div>    
+ </header>
+ <main class="content">
+     <aside class="grid-left menu-left">
+        <h2 class="menu-title clearfix">主菜单<em class="anticon icon icon-doubleleft fr"></em></h2>
+        <ul class="menu-list">
+           <li class="menu-item">
+                <h2 class="menu-title clearfix">用户管理<span class="anticon icon icon-up fr"></span></h2>
+           		<ul class="sub-menu-list">
+           		   <li class="sub-menu-item"><a href="#/">admin</a></li>
+		           <li class="sub-menu-item"><a href="#/user/list">user</a></li>
+           		</ul>
+           </li>
+           <li class="menu-item">
+                <h2 class="menu-title clearfix">系统管理<span class="anticon icon icon-down fr"></span></h2>
+           		<ul class="sub-menu-list">
+		           <li class="sub-menu-item"><a href="#/product/list">product</a></li>
+		           <li class="sub-menu-item"><a href="#/product/upload">upload</a></li>
+           		</ul>
+           </li>       
+        </ul>        
+     </aside>
+     <section class="grid-right">
+          <ui-view></ui-view>
+     </section>
+ </main>
+ <footer class="footer">
+     <div class="sub-foot"><p>copyright@xxx 1998-2018</p></div>    
+ </footer>
+ <script type="text/ng-template" id="hello.html">
           <div>hello,{{name}},<input type="text" ng-model="name"/></div>
      </script>
-     <script type="text/ng-template" id="dialog.html">
+ <script type="text/ng-template" id="dialog.html">
           <div class="modal-header">
 			<h3 class="modal-title">模态框</h3>
 		</div>
@@ -33,5 +50,4 @@
 			</button>
 			<button class="btn btn-warning" ng-click="cancel()">退出</button>
 		</div>
-     </script>
-</div>
+</script>
