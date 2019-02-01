@@ -6,7 +6,11 @@
         </div>
         <div class="box-item">
         	<label>名称：</label>
-        	<input type="file" name="file" id="file"/>
+        	<div class="upload-wrap anticon">
+        		<input class="file-ele" type="file" name="file" id="file"/>
+        		<div class="btn-upload"><em class="icon icon-upload"></em>&nbsp;上传</div>
+        	</div>
+        	
         </div>
         <div class="box-item">
         	<input type="button" class="btn btn-primary" ng-click="save();" value="保存"/>

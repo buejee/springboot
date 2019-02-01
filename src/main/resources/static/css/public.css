@@ -19,15 +19,16 @@ main{padding-bottom:50px;}
 .logout{}
 
 .content{display:flex;}
-.content .grid-left{float:left;flex:none;border-right:1px solid #ddd;}
-.content .grid-left:before{content:"";display: block;width: 180px;position: fixed;bottom:0;top:0;z-index:-1;border:1px solid #ccc;border-width: 0 1px 0 0;}
+.content .grid-left{float:left;flex:none;border-right:1px solid #95b8e7;}
+.content .grid-left:before{content:"";display: block;width: 180px;position: fixed;bottom:0;top:0;z-index:-1;border:1px solid #95b8e7;border-width: 0 1px 0 0;}
 .content .grid-right{flex:1;float:right;overflow:hidden;}
 .menu-left{width:179px;}
-.menu-left .menu-title{height:30px;line-height:30px;background:#e9f1ff;border:1px solid #95b8e7;}
+.menu-left .menu-title{height:30px;line-height:30px;background:#e9f1ff;border:1px solid #95b8e7;margin-top:-1px;}
 .menu-left .menu-list{}
 .menu-item  .item-title{font-weight:bold;font-size:14px;height:40px;line-height:40px;cursor:pointer;padding:0 10px;background:#95b8E7;}
-.menu-item .sub-menu-list{margin-left:10px;border-right:1px solid #95b8e7;}
-.menu-item a{color:#000;}
+.menu-item .sub-menu-list{border-right:1px solid #95b8e7;cursor:pointer;}
+.menu-item a{color:#000;display:block;padding-left:10px;}
+.menu-item a:hover{background:#eaf2ff;}
 .menu-item .sub-menu-item{height:26px;line-height:26px;}
 .content .table-list{margin:10px;border:1px solid #e5e5e5;border-radius:2px;}
 .content .table-list .list-head{border-bottom:1px solid #ddd;}
@@ -128,7 +129,7 @@ main{padding-bottom:50px;}
 	width: 100%;
 	cursor: pointer;
 }
-.upload-wrap .file-open{
+.upload-wrap .btn-upload{
 	width:90px;
 	height:30px;
 	line-height:30px;
@@ -136,6 +137,7 @@ main{padding-bottom:50px;}
 	color:#fff;
 	background: #3385ff;
 }
-.upload-wrap .icon-upload{font-style: normal;}
+.upload-wrap .icon-upload{font-style: normal;color:#fff;}
 .icon{width:16px;height:16px;line-height:16px;display:inline-block;color:#6db9f1;}
 .menu-title .icon{position:relative;top:7px;right:7px;cursor:pointer;}
+.icon:hover{color:#1383d5;}
